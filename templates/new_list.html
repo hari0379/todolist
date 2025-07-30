@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block title %}
+trello_app
+{%endblock%}
+
+
+{% block content %}
+<h1>New TaskList</h1>
+{# form #}
+{# csrf: cross site request forgery #}
+<form action="" method="POST">
+  {% csrf_token %}
+  <p>name:<input name="list_name" type="text"/></p>
+  <input type="submit" value="add_list"/>
+</form>
+
+{% endblock %}

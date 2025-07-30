@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trello_app | login </title>
+</head>
+<body>
+<h1>login</h1>
+
+<form action=" " method="POST">
+    {% csrf_token %}
+    <p>username:<input type="username" name="username" placeholder="username"/></p>
+    <p>password:<input type="password" name="password" placeholder="password"/></p>
+    <input type="submit" name="submit" value="login"/>
+</form>
+{% for message in messages %}
+    {{message}}
+{% endfor %}
+
+</body>
+</html>
